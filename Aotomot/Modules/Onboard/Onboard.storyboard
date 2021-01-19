@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Onboard-->
+        <scene sceneID="Suw-oJ-YFG">
+            <objects>
+                <viewController storyboardIdentifier="OnboardViewController" title="Onboard" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bum-KG-rth" customClass="OnboardViewController" customModule="DriverManagement" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uze-ED-pDV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WGo-Le-81m">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mKv-YV-bSe" customClass="ScalingCarouselView" customModule="DriverManagement" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="40" width="375" height="577"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="ERb-41-SEk">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="inset">
+                                        <real key="value" value="60"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="dataSource" destination="bum-KG-rth" id="UZ1-6w-zeF"/>
+                                    <outlet property="delegate" destination="bum-KG-rth" id="04u-ui-tlT"/>
+                                </connections>
+                            </collectionView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="ps2-ZS-ows">
+                                <rect key="frame" x="0.0" y="630" width="375" height="37"/>
+                                <color key="pageIndicatorTintColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.93725490196078431" green="0.22745098039215686" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BPH-V5-Qrr" firstAttribute="trailing" secondItem="mKv-YV-bSe" secondAttribute="trailing" id="Aso-XB-kAf"/>
+                            <constraint firstItem="BPH-V5-Qrr" firstAttribute="trailing" secondItem="ps2-ZS-ows" secondAttribute="trailing" id="CUw-30-D3x"/>
+                            <constraint firstItem="BPH-V5-Qrr" firstAttribute="trailing" secondItem="WGo-Le-81m" secondAttribute="trailing" id="JiG-zk-Jxz"/>
+                            <constraint firstItem="mKv-YV-bSe" firstAttribute="top" secondItem="BPH-V5-Qrr" secondAttribute="top" constant="20" id="NSt-jq-ZV2"/>
+                            <constraint firstItem="WGo-Le-81m" firstAttribute="leading" secondItem="BPH-V5-Qrr" secondAttribute="leading" id="PAd-4i-5gx"/>
+                            <constraint firstItem="BPH-V5-Qrr" firstAttribute="bottom" secondItem="mKv-YV-bSe" secondAttribute="bottom" constant="50" id="g4g-QC-bHN"/>
+                            <constraint firstItem="WGo-Le-81m" firstAttribute="top" secondItem="uze-ED-pDV" secondAttribute="top" id="hSr-5d-jvU"/>
+                            <constraint firstItem="BPH-V5-Qrr" firstAttribute="bottom" secondItem="ps2-ZS-ows" secondAttribute="bottom" id="k2r-Cc-qRY"/>
+                            <constraint firstItem="ps2-ZS-ows" firstAttribute="leading" secondItem="BPH-V5-Qrr" secondAttribute="leading" id="mBs-xJ-ho4"/>
+                            <constraint firstItem="mKv-YV-bSe" firstAttribute="leading" secondItem="BPH-V5-Qrr" secondAttribute="leading" id="vaJ-Uw-XY7"/>
+                            <constraint firstAttribute="bottom" secondItem="WGo-Le-81m" secondAttribute="bottom" id="wMD-zm-T98"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BPH-V5-Qrr"/>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImage" destination="WGo-Le-81m" id="adv-Ej-6pX"/>
+                        <outlet property="collectionView" destination="mKv-YV-bSe" id="thw-mK-Ivj"/>
+                        <outlet property="pageIndicator" destination="ps2-ZS-ows" id="rMV-S4-ESz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BRL-Cd-Geg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1372" y="-591.45427286356824"/>
+        </scene>
+    </scenes>
+</document>

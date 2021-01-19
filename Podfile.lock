@@ -1,0 +1,34 @@
+PODS:
+  - Alamofire (4.7.2)
+  - SDWebImage (4.4.2):
+    - SDWebImage/Core (= 4.4.2)
+  - SDWebImage/Core (4.4.2)
+  - SnapKit (5.0.0)
+  - Spring (1.0.5)
+  - ViewAnimator (2.1.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - SDWebImage
+  - SnapKit
+  - Spring
+  - ViewAnimator
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - SDWebImage
+    - SnapKit
+    - Spring
+    - ViewAnimator
+
+SPEC CHECKSUMS:
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
+  SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
+  Spring: 17901566c8ecf3a1327902b940406c64512f9bb1
+  ViewAnimator: 43c31539508d995ea2c5e98338211f7c009b358f
+
+PODFILE CHECKSUM: d7327b21cfad3b5d4e85ac0267f222573d8e78cf
+
+COCOAPODS: 1.5.3
